@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="map" type="id" />
+    <item name="use_current_location" type="id" />
+    <item name="bottomSheetLayout" type="id" />
+    <item name="proceedButton" type="id" />
+    <item name="card_trucks" type="id" />
+</resources>

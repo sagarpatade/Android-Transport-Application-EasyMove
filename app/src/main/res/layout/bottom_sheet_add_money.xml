@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/rounded_background"
+    android:layout_gravity="bottom"
+    android:weightSum="1">
+
+    <!-- Add Money Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add money"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginBottom="12dp"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Enter Amount Input -->
+    <EditText
+        android:id="@+id/amountInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter amount"
+        android:inputType="number"
+        android:background="@drawable/ripple_effect"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#000000"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Amount input field" />
+
+    <!-- Amount Options -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/button500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+500"
+            android:backgroundTint="#DCEDF4"
+            android:textColor="#5BA2EF"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Add 500 button"
+            android:onClick="onAmountSelected" />
+
+        <Button
+            android:id="@+id/button1000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+1000"
+            android:backgroundTint="#DCEDF4"
+            android:textColor="#5BA2EF"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Add 1000 button"
+            android:onClick="onAmountSelected" />
+
+        <Button
+            android:id="@+id/button2000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+2000"
+            android:backgroundTint="#DCEDF4"
+            android:textColor="#5BA2EF"
+
+            android:contentDescription="Add 2000 button"
+            android:onClick="onAmountSelected" />
+    </LinearLayout>
+
+    <!-- Proceed Button -->
+    <Button
+        android:id="@+id/proceedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proceed"
+        android:backgroundTint="#D3D3D3"
+        android:textColor="#2196F3"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Proceed button"
+        android:onClick="onProceedClicked" />
+
+</LinearLayout>

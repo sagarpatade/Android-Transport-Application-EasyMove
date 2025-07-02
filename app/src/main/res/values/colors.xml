@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color> <!-- White -->
+    <color name="colorPrimaryDark">#E0E0E0</color> <!-- Light Gray -->
+    <color name="colorAccent">#BDBDBD</color> <!-- Gray -->
+    <color name="buttonDefaultBackground">#F5F5F5</color> <!-- Very Light Gray -->
+    <color name="buttonPressedBackground">#2196F3</color> <!-- Blue -->
+</resources>
+
+

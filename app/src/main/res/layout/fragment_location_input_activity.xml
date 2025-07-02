@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LocationInputActivity">
+
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Search Box Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_background"
+            android:padding="8dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/search_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Where is your Pickup?"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:background="@null"
+                android:padding="8dp" />
+
+            <ListView
+                android:id="@+id/location_suggestions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/search_location"
+                android:layout_marginTop="8dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Map Fragment -->
+        <FrameLayout
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/search_location"
+            android:layout_above="@+id/footer_buttons"
+            android:layout_marginTop="16dp"
+            tools:ignore="NotSibling" />
+
+        <!-- Footer Buttons -->
+        <LinearLayout
+            android:id="@+id/footer_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_alignParentBottom="true"
+            android:weightSum="2">
+
+            <!-- Use Current Location Button -->
+            <LinearLayout
+                android:id="@+id/use_current_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="@drawable/button_background">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_location"
+                    android:contentDescription="Current Location Icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Use current location"
+                    android:paddingStart="8dp"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <!-- Locate on Map Button -->
+            <LinearLayout
+                android:id="@+id/locate_on_map"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="@drawable/button_background"
+                android:layout_marginStart="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_map_24"
+                    android:contentDescription="Locate on Map Icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Locate on the Map"
+                    android:paddingStart="8dp"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
